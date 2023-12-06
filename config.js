@@ -4,7 +4,7 @@
 module.exports = {
   // Server listener [Required]
   address: "0.0.0.0",
-  port: "80",
+  port: "8008",
 
   // Clusters.
   // 0 will make bostr run clusters with available parallelism / CPU cores.
