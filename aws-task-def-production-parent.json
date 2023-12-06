@@ -31,7 +31,7 @@
       }
     }
   ],
-  "family": "task-def-production-reverse-relay-child",
+  "family": "task-def-production-reverse-relay-parent",
   "taskRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
