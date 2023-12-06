@@ -1,7 +1,7 @@
 {
   "containerDefinitions": [
     {
-      "name": "container-reverse-relay",
+      "name": "container-reverse-relay-child",
       "image": "028902851309.dkr.ecr.ap-northeast-1.amazonaws.com/reverse-relay",
       "cpu": 0,
       "portMappings": [
@@ -25,13 +25,13 @@
           "awslogs-create-group": "true",
           "awslogs-group": "/ecs/task-def-production-reverse-relay",
           "awslogs-region": "ap-northeast-1",
-          "awslogs-stream-prefix": "ecs"
+          "awslogs-stream-prefix": "[child]"
         },
         "secretOptions": []
       }
     }
   ],
-  "family": "task-def-production-reverse-relay",
+  "family": "task-def-production-reverse-relay-parent",
   "taskRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
   "executionRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",

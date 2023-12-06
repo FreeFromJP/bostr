@@ -11,10 +11,10 @@ module.exports = {
   clusters: 0,
 
   // Log about bouncer connection with relays?
-  log_about_relays: false,
+  log_about_relays: true,
 
   // Time before reconnect to relays in miliseconds.
-  reconnect_time: 5000,
+  reconnect_time: 3000,
 
   // Wait for every connected relays send EOSE.
   // Could improve accurancy on received events.
@@ -31,7 +31,7 @@ module.exports = {
   pause_on_limit: true,
 
   // EOSE timeout in miliseconds
-  eose_timeout: 5000,
+  eose_timeout: 3000,
 
   // Maximum of received EOSE from relays to send EOSE to client.
   // Normally, waiting EOSE from 3 relays should be enough. Leaving it with 0 equals wait for every established relays.
@@ -83,11 +83,12 @@ module.exports = {
   // Nostr relays to bounce [Required]
   relays: [
     "ws://172.31.48.185:5210",
-    "ws://172.31.48.185:8008",
     "ws://172.31.49.38:5210",
-    "ws://172.31.49.38:8008",
     "ws://172.31.50.242:5210",
-    "ws://172.31.50.242:8008",
     "wss://freerelay.xyz",
+
+    "ws://172.31.50.242:8008",
+    "ws://172.31.48.185:8008",
+    "ws://172.31.49.38:8008",
   ]
 }
