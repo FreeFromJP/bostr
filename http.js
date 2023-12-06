@@ -34,8 +34,13 @@ server.on('request', (req, res) => {
     }
 
     res.write(`\nI have ${wss.clients.size} clients currently connected to this relay${(process.env.CLUSTERS || config.clusters) > 1 ? " on this cluster" : ""}.\n`);
-    if (config?.authorized_keys?.length) res.write("\nNOTE: This relay has configured for personal use only. Only authorized users could use this bostr relay.\n");
-    res.write(`\nConnect to relay with nostr client: ws://${req.headers.host}${req.url} or wss://${req.headers.host}${req.url}\n\n---\n`);
+
+    if (config.mode === 'public') {
+      res.end(`\nConnect to relay with nostr client: wss://${req.headers.host}${req.url}\n\n`);
+    } else {
+      if (config?.authorized_keys?.length) res.write("\nNOTE: This relay has configured for personal use only. Only authorized users could use this bostr relay.\n");
+      res.end(`\nConnect to relay with nostr client: ws://${req.headers.host}${req.url} or wss://${req.headers.host}${req.url}\n\n`);
+    }
   } else {
     res.writeHead(404).end("What are you looking for?");
   }
