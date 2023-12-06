@@ -38,7 +38,7 @@ module.exports = (ws, req) => {
     // If it was the users listed at <private_keys> in config.js, Then the user could use NIP-42 protected relays.
 
     authKey = Date.now() + Math.random().toString(36);
-    ws.send(JSON.stringify(["AUTH", authKey, 3]));
+    ws.send(JSON.stringify(["AUTH", authKey, 3, private_keys]));
   }
 
   console.log(process.pid, `->- ${req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.address()?.address} connected as ${ws.id}`);
