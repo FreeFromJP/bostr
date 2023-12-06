@@ -30,7 +30,7 @@ USER node
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8008
+EXPOSE 80 8008
 
 # Run the application.
 CMD node index.js
