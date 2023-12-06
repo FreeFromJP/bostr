@@ -44,10 +44,10 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      # config.js
-      - name: generate config.js
-        run: |
-          echo '${{ vars.CONFIG }}' > config.js
+#      # config.js
+#      - name: generate config.js
+#        run: |
+#          echo '${{ vars.CONFIG }}' > config.js
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
