@@ -11,6 +11,13 @@
           "hostPort": 80,
           "protocol": "tcp",
           "appProtocol": "http"
+        },
+        {
+          "name": "container-reverse-relay-8008-tcp",
+          "containerPort": 8008,
+          "hostPort": 8008,
+          "protocol": "tcp",
+          "appProtocol": "http"
         }
       ],
       "essential": true,
