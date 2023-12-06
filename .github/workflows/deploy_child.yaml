@@ -47,7 +47,7 @@ jobs:
       # config.js
       - name: generate config.js
         run: |
-          echo '${{ vars.CONFIG }}' > config.js
+          cp config-child.js config.js
 
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
