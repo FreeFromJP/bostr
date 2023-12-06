@@ -87,8 +87,6 @@ module.exports = {
     "ws://172.31.50.242:5210",
     "wss://freerelay.xyz",
 
-    "ws://172.31.50.242:8008",
-    "ws://172.31.48.185:8008",
-    "ws://172.31.49.38:8008",
+    "ws://internal-alb-private-reverse-relay-parent-400352832.ap-northeast-1.elb.amazonaws.com:8008",
   ]
 }
