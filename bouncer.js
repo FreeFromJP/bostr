@@ -30,7 +30,7 @@ module.exports = (ws, req) => {
     authKey = Date.now() + Math.random().toString(36);
     authorized = false;
     ws.send(JSON.stringify(["AUTH", authKey, 2]));
-  } else if (private_keys !== {}) {
+  } else if (Object.keys(private_keys).length > 0) {
     // If there is no whitelist, Then we ask to client what is their public key.
     // We will enable NIP-42 function for this session if user pubkey was available & valid in <private_keys>.
 
