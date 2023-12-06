@@ -2,6 +2,8 @@
 // Bostr config
 
 module.exports = {
+  mode: "public",
+
   // Server listener [Required]
   address: "0.0.0.0",
   port: "8008",
