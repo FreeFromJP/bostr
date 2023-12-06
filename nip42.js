@@ -17,5 +17,5 @@ module.exports = (relay, pubkey, privkey, challenge) => {
 
   signed_challenge.id = getEventHash(signed_challenge);
   signed_challenge.sig = getSignature(signed_challenge, privkey);
-  relay.send(JSON.stringify(["AUTH", signed_challenge]));
+  relay.send(JSON.stringify(["AUTH", signed_challenge, 1]));
 }

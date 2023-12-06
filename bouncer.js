@@ -29,7 +29,7 @@ module.exports = (ws, req) => {
   if (authorized_keys?.length) {
     authKey = Date.now() + Math.random().toString(36);
     authorized = false;
-    ws.send(JSON.stringify(["AUTH", authKey]));
+    ws.send(JSON.stringify(["AUTH", authKey, 2]));
   } else if (private_keys !== {}) {
     // If there is no whitelist, Then we ask to client what is their public key.
     // We will enable NIP-42 function for this session if user pubkey was available & valid in <private_keys>.
@@ -38,7 +38,7 @@ module.exports = (ws, req) => {
     // If it was the users listed at <private_keys> in config.js, Then the user could use NIP-42 protected relays.
 
     authKey = Date.now() + Math.random().toString(36);
-    ws.send(JSON.stringify(["AUTH", authKey]));
+    ws.send(JSON.stringify(["AUTH", authKey, 3]));
   }
 
   console.log(process.pid, `->- ${req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.address()?.address} connected as ${ws.id}`);
