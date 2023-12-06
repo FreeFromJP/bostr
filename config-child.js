@@ -45,11 +45,7 @@ module.exports = {
   // A whitelist of users public keys who could use this bouncer.
   // Leaving this empty will allows everyone to use this bouncer.
   // NOTE: - Require NIP-42 compatible nostr client
-  authorized_keys: [
-    // "pubkey-in-hex",
-    // "npub ....",
-    // ....
-  ],
+  authorized_keys: [],
 
   // Used for accessing NIP-42 protected events from certain relays.
   // It could be your key. Leaving this empty completely disables NIP-42 function.
@@ -58,10 +54,7 @@ module.exports = {
   // There are no security risk as it utilize NIP-42 to recognize client public key.
   //
   // NOTE: - Require NIP-42 compatible nostr client
-  private_keys: {
-    // "pubkey-in-hex": "privatekey",
-    // "pubkey-in-hex": "nsec ...."
-  },
+  private_keys: {},
   // Tip: If you want to convert your pubkey/privatekey to hex,
   //      You could run the following command:
   //        $ node hexconverter.js npub....
