@@ -86,11 +86,17 @@ module.exports = {
 
   // Nostr relays to bounce [Required]
   relays: [
+    // proxy-relay-for-cn-sub-1
     "ws://172.31.48.185:5210",
+    // proxy-relay-for-cn-sub-2
     "ws://172.31.49.38:5210",
+    // proxy-relay-for-cn-sub-3
     "ws://172.31.50.242:5210",
-    "wss://freerelay.xyz",
 
+    // relay freerelay.xyz
+    "ws://172.31.22.255:8008",
+
+    // sub reverse relay
     "ws://internal-alb-private-reverse-relay-child-1548497222.ap-northeast-1.elb.amazonaws.com:8008",
   ]
 }
