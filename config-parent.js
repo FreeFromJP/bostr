@@ -87,7 +87,7 @@ module.exports = {
   // Nostr relays to bounce [Required]
   relays: [
     // relay freerelay.xyz
-    "ws://172.31.22.255:8008",
+    "wss://freerelay.xyz",
 
     // sub reverse relay
     "ws://internal-alb-private-reverse-relay-child-1548497222.ap-northeast-1.elb.amazonaws.com:8008",
