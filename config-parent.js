@@ -86,13 +86,6 @@ module.exports = {
 
   // Nostr relays to bounce [Required]
   relays: [
-    // proxy-relay-for-cn-sub-1
-    "ws://172.31.48.185:5210",
-    // proxy-relay-for-cn-sub-2
-    "ws://172.31.49.38:5210",
-    // proxy-relay-for-cn-sub-3
-    "ws://172.31.50.242:5210",
-
     // relay freerelay.xyz
     "ws://172.31.22.255:8008",
 
