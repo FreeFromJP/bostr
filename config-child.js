@@ -116,7 +116,7 @@ module.exports = {
     "wss://nostr.mikedilger.com",
     "wss://nostr.oxtr.dev",
     "wss://nostr.relayable.org",
-    "wss://nostr.relayer.se",
+    // "wss://nostr.relayer.se",   // => ECONNREFUSED
     "wss://nostr.wine",
     "wss://nostr21.com",
     "wss://nostrich.friendship.tw",
