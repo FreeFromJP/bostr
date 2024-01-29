@@ -20,7 +20,7 @@ server.on('request', (req, res) => {
       "Access-Control-Allow-Origin": "*"
     }).end(JSON.stringify(config.server_meta));
 
-  if (req.url === "/") {
+  if (req.url === "/" || /^\/v[1-9]{1}\/ws\-proxy.*/.test(req.url)) {
     res.writeHead(200, {
       "Content-Type": "text/plain"
     });
