@@ -89,9 +89,6 @@ module.exports = {
     // relay freerelay.xyz
     "wss://freerelay.xyz",
 
-    // sub reverse relay
-    "ws://internal-alb-private-reverse-relay-child-1548497222.ap-northeast-1.elb.amazonaws.com:8008",
-
     // sub reverse relay new
     "ws://internal-alb-private-ff-production-1223236873.ap-northeast-1.elb.amazonaws.com:8009"
   ]

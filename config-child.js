@@ -77,6 +77,10 @@ module.exports = {
 
   // Nostr relays to bounce [Required]
   relays: [
+    "wss://relay1.nostrchat.io",
+    "wss://yabu.me",
+    "wss://relay.stoner.com",
+    "wss://nostr.mom",
     "wss://nostr-relay.derekross.me",
     "wss://relay.nostromo.social",
     "wss://nostr.asdf.mx",
@@ -139,10 +143,8 @@ module.exports = {
     "wss://relay.primal.net",
     "wss://relay.sendstr.com",
     "wss://relay.snort.social",
-    "wss://relay.stoner.com",
     "wss://relay.wavlake.com",
     "wss://relay.wellorder.net",
-    "wss://relay1.nostrchat.io",
     "wss://relayable.org",
     "wss://rsslay.nostr.moe",
     "wss://sg.qemura.xyz",
@@ -150,7 +152,6 @@ module.exports = {
     "wss://spore.ws",
     "wss://th1.nostr.earnkrub.xyz",
     "wss://tictac.nostr1.com",
-    "wss://yabu.me",
     "wss://za.purplerelay.com",
   ]
 }
