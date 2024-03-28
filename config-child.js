@@ -77,6 +77,7 @@ module.exports = {
 
   // Nostr relays to bounce [Required]
   relays: [
+    "wss://relay.getalby.com/v1",
     "wss://relay1.nostrchat.io",
     "wss://yabu.me",
     "wss://relay.stoner.com",
