@@ -19,16 +19,7 @@
       "mountPoints": [],
       "volumesFrom": [],
       "ulimits": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-create-group": "true",
-          "awslogs-group": "/ecs/task-def-production-reverse-relay",
-          "awslogs-region": "ap-northeast-1",
-          "awslogs-stream-prefix": "[parent]"
-        },
-        "secretOptions": []
-      }
+      "logConfiguration": {}
     }
   ],
   "family": "task-def-production-reverse-relay-parent",
