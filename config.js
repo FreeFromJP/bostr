@@ -2,7 +2,7 @@
 // Bostr config
 
 module.exports = {
-  mode: "public",
+  mode: "private",
 
   // Server listener [Required]
   address: "0.0.0.0",
@@ -45,12 +45,7 @@ module.exports = {
   // A whitelist of users public keys who could use this bouncer.
   // Leaving this empty will allows everyone to use this bouncer.
   // NOTE: - Require NIP-42 compatible nostr client
-  //
-  // "pubkey-in-hex",
-  // "npub ....",
-  // ....
-  authorized_keys: [
-  ],
+  authorized_keys: [],
 
   // Used for accessing NIP-42 protected events from certain relays.
   // It could be your key. Leaving this empty completely disables NIP-42 function.
@@ -59,11 +54,7 @@ module.exports = {
   // There are no security risk as it utilize NIP-42 to recognize client public key.
   //
   // NOTE: - Require NIP-42 compatible nostr client
-  //
-  // "pubkey-in-hex": "privatekey",
-  // "pubkey-in-hex": "nsec ...."
   private_keys: {},
-
   // Tip: If you want to convert your pubkey/privatekey to hex,
   //      You could run the following command:
   //        $ node hexconverter.js npub....
@@ -86,10 +77,7 @@ module.exports = {
 
   // Nostr relays to bounce [Required]
   relays: [
-    // relay freerelay.xyz
-    "wss://freerelay.xyz",
-
-    // sub reverse relay new
-    "ws://internal-alb-private-ff-production-1223236873.ap-northeast-1.elb.amazonaws.com:8009"
+    "ws://172.31.47.35:7777",
+    "ws://172.31.45.30:7777"
   ]
 }
