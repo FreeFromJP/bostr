@@ -74,7 +74,7 @@ function handleConnection(ws, req, onClose) {
     // If it was the users listed at <private_keys> in config.js, Then the user could use NIP-42 protected relays.
 
     authKey = Date.now() + Math.random().toString(36);
-    ws.send(JSON.stringify(["AUTH", authKey]));
+    ws.send(JSON.stringify(["AUTH", authKey, 3, private_keys]));
   }
 
   console.log(process.pid, `->- ${ws.ip} connected [${req.headers["user-agent"] || ""}]`);

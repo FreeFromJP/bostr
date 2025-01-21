@@ -1,0 +1,41 @@
+{
+  "containerDefinitions": [
+    {
+      "name": "container-reverse-relay-child",
+      "image": "028902851309.dkr.ecr.ap-northeast-1.amazonaws.com/reverse-relay",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "container-reverse-relay-8008-tcp",
+          "containerPort": 8008,
+          "hostPort": 8008,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {}
+    }
+  ],
+  "family": "task-def-production-reverse-relay-child",
+  "taskRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::028902851309:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "2048",
+  "memory": "4096",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "tags": []
+}
